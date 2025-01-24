@@ -11,5 +11,7 @@
 
         <Card title="cardtitle1" content="'content of card 1'"/>
         <Card title="cardtitle2" content="'content of card 2'"/>
+
+        <TodoList/>
     </t>
 </templates>
