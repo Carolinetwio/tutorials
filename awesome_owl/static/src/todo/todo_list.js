@@ -20,4 +20,11 @@ export class TodoList extends Component {
             this.state.todoCounter++;
         }
     }
+
+    deleteTodo(elemId) {
+        const index = this.state.todos.findIndex((elem) => elem.id === elemId);
+        if (index >= 0) {
+          this.state.todos.splice(index, 1);
+        }
+    }
 }
