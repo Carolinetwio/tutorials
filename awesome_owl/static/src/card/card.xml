@@ -3,7 +3,13 @@
     <t t-name="awesome_owl.card">
 
         <div class="card d-inline-block m-2" style="width: 18rem;">
-            <div class="card-body">
+            <div class="card-header">
+                <button t-on-click="showHide">
+                    <t t-if="state.visible">Hide</t>
+                    <t t-else="">Show</t>
+                </button>
+            </div>
+            <div class="card-body" t-if="state.visible">
                 <h5 class="card-title"><t t-out="props.title"/></h5>
                 <p class="card-text"><t t-slot="default"/></p>
             </div>

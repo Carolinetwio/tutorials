@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component } from "@odoo/owl";
+import { Component, useState } from "@odoo/owl";
 
 
 export class Card extends Component {
@@ -14,5 +14,11 @@ export class Card extends Component {
         }
     };
     static template = "awesome_owl.card";  
-
+    
+    setup() {
+        this.state = useState({ visible: true });
+    }
+    showHide() {
+        this.state.visible = !this.state.visible;
+    }
 }
