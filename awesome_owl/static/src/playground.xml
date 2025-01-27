@@ -9,8 +9,8 @@
             <span>Sum: <t t-esc="state.sum"/></span>
         </div>    
 
-        <Card title="cardtitle1" content="'content of card 1'"/>
-        <Card title="cardtitle2" content="'content of card 2'"/>
+        <Card title="cardtitle1">content of card 1</Card>
+        <Card title="cardtitle2"><Counter onChange.bind="incrementSum"/></Card>
 
         <TodoList/>
     </t>
