@@ -10,4 +10,8 @@ export class TodoItem extends Component {
         }
     };
     static template = "awesome_owl.todo_item";
+    
+    toggleTodo() {
+        this.props.todo.isCompleted = !this.props.todo.isCompleted;
+    }
 }
