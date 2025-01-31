@@ -13,7 +13,7 @@
     'author': "Odoo",
     'website': "https://www.odoo.com/",
     'category': 'Tutorials/AwesomeDashboard',
-    'version': '0.5',
+    'version': '0.6',
     'application': True,
     'installable': True,
     'depends': ['base', 'web', 'mail', 'crm'],

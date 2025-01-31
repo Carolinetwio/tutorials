@@ -8,7 +8,7 @@
                 <button t-on-click="openLeadAction">Leads</button>
             </t>
             <Card>some content</Card>
-            <Card>I love milk</Card>
+            <Card size="2">I love milk</Card>
             <Card>some content</Card>
         </Layout> 
     </t>

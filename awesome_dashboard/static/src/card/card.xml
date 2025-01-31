@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="awesome_dashboard.card">
 
-        <div class="card d-inline-block m-2">
+        <div class="card d-inline-block m-2" t-att-style="'width: ' + 18*(props.size) + 'rem'">
             <t t-slot="default"/>
         </div>
         
