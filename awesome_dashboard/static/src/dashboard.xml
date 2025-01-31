@@ -4,7 +4,8 @@
     <t t-name="awesome_dashboard.AwesomeDashboard">
         <Layout display="display" className="'o_dashboard h-100'">
             <t t-set-slot="layout-buttons">
-                Hello dashboard
+                <button t-on-click="openCustomerKanban">Customers</button>
+                <button t-on-click="openLeadAction">Leads</button>
             </t>
             some content
         </Layout> 
