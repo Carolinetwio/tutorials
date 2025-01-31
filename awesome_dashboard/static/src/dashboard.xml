@@ -7,7 +7,9 @@
                 <button t-on-click="openCustomerKanban">Customers</button>
                 <button t-on-click="openLeadAction">Leads</button>
             </t>
-            some content
+            <Card>some content</Card>
+            <Card>I love milk</Card>
+            <Card>some content</Card>
         </Layout> 
     </t>
 
