@@ -5,7 +5,6 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { useService } from "@web/core/utils/hooks";
 import { Card } from "./card/card";
-import { rpc } from "@web/core/network/rpc"; //specific to Odoo 18
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
@@ -16,8 +15,9 @@ class AwesomeDashboard extends Component {
             controlPanel: {},
         };
         this.action = useService("action");
+        this.statisticsService = useService("awesome_dashboard.statistics");
         onWillStart(async () => {
-             this.statistics = await rpc("/awesome_dashboard/statistics");
+            this.statistics = await this.statisticsService.loadStatistics();
         });
     }
     openCustomerKanban() {
