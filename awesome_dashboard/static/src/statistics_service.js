@@ -1,13 +1,12 @@
 /** @odoo-module */
 import { registry } from "@web/core/registry";
 import { rpc } from "@web/core/network/rpc";
+import { memoize } from "@web/core/utils/functions";
 
 const statisticsService = {
     start() {
         return {
-            loadStatistics () {
-                return rpc("/awesome_dashboard/statistics");
-            }
+            loadStatistics: memoize(() => rpc("/awesome_dashboard/statistics")),
         };
     },
 };
