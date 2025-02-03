@@ -13,7 +13,7 @@
     'author': "Odoo",
     'website': "https://www.odoo.com/",
     'category': 'Tutorials/AwesomeDashboard',
-    'version': '0.11',
+    'version': '0.12',
     'application': True,
     'installable': True,
     'depends': ['base', 'web', 'mail', 'crm'],
@@ -24,7 +24,11 @@
     'assets': {
         'web.assets_backend': [
             'awesome_dashboard/static/src/**/*',
+            ('remove', 'awesome_dashboard/static/src/dashboard/**/*'),
         ],
+        'awesome_dashboard.dashboard': [
+            'awesome_dashboard/static/src/dashboard/**/*',
+        ]
     },
     'license': 'AGPL-3'
 }
