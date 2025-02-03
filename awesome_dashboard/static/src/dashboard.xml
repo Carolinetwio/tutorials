@@ -7,27 +7,29 @@
                 <button t-on-click="openCustomerKanban">Customers</button>
                 <button t-on-click="openLeadAction">Leads</button>
             </t>
-            <Card>
-                Average amount of t-shirt by order this month
-                <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.average_quantity"/></div>
-            </Card>
-            <Card>
-                Average time for an order to go from 'new' to 'sent' or 'cancelled'
-                <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.average_time"/></div>
-            </Card>
-            <Card>
-                Number of new orders this month
-                <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.nb_new_orders"/></div>
-            </Card>
-            <Card>
-                Number of cancelled orders this month
-                <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.nb_cancelled_orders"/></div>
-            </Card>
-            <Card>
-                Total amount of new orders this month
-                <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.total_amount"/></div>
-            </Card>
-            <PieChart data="statistics"/>
+            <div t-if="statistics.isReady">
+                <Card>
+                    Average amount of t-shirt by order this month
+                    <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.average_quantity"/></div>
+                </Card>
+                <Card>
+                    Average time for an order to go from 'new' to 'sent' or 'cancelled'
+                    <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.average_time"/></div>
+                </Card>
+                <Card>
+                    Number of new orders this month
+                    <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.nb_new_orders"/></div>
+                </Card>
+                <Card>
+                    Number of cancelled orders this month
+                    <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.nb_cancelled_orders"/></div>
+                </Card>
+                <Card>
+                    Total amount of new orders this month
+                    <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.total_amount"/></div>
+                </Card>
+                <PieChart data="statistics"/>
+            </div>
         </Layout> 
     </t>
 
