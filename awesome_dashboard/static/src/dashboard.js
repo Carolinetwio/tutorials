@@ -5,10 +5,11 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { useService } from "@web/core/utils/hooks";
 import { Card } from "./card/card";
+import { PieChart } from "./piechart/piechart";
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
-    static components = { Layout, Card };
+    static components = { Layout, Card, PieChart };
 
     setup() {
         this.display = {

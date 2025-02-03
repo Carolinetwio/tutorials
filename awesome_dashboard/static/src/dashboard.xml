@@ -27,6 +27,7 @@
                 Total amount of new orders this month
                 <div style="color: green; font-size: 20px; text-align: center;"><t t-esc="statistics.total_amount"/></div>
             </Card>
+            <PieChart data="statistics"/>
         </Layout> 
     </t>
 
