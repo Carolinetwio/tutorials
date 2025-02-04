@@ -17,7 +17,7 @@ class AwesomeDashboard extends Component {
         };
         this.action = useService("action");
         this.statistics = useState(useService("awesome_dashboard.statistics"));
-        this.items = items;
+        this.items = registry.category("awesome_dashboard").getAll();
     }
     openCustomerKanban() {
         this.action.doAction("base.action_partner_form");
