@@ -5,11 +5,11 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { useService } from "@web/core/utils/hooks";
 import { Card } from "./card/card";
-import { PieChart } from "./piechart/piechart";
+import { items } from "./dashboard_items";
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
-    static components = { Layout, Card, PieChart };
+    static components = { Layout, Card };
 
     setup() {
         this.display = {
@@ -17,6 +17,7 @@ class AwesomeDashboard extends Component {
         };
         this.action = useService("action");
         this.statistics = useState(useService("awesome_dashboard.statistics"));
+        this.items = items;
     }
     openCustomerKanban() {
         this.action.doAction("base.action_partner_form");

@@ -22,7 +22,7 @@ export class PieChart extends Component {
         if (this.chart) {
             this.chart.destroy();
         }
-        const orders_by_size = this.props.data.orders_by_size;
+        const orders_by_size = this.props.data;
         const data = {
             datasets: [{
                 data: Object.values(orders_by_size)
